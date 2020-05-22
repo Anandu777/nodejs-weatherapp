@@ -10,7 +10,8 @@ const forecast = (latitude, longitude , callback) => {
         } else {
             callback(undefined, body.current.weather_descriptions[0] + '. It is currently ' + 
                     body.current.temperature + 'F. It feels like ' + 
-                    body.current.feelslike + 'F out');
+                    body.current.feelslike + 'F out. Humidity is '+
+                    body.current.humidity + '%.');
         }
     })
 };
